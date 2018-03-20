@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NewLocationApp"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="NewLocationApp.MainPage" Padding="10">
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <local:BindableMap Grid.Row="0" Grid.ColumnSpan="3"  MapType="Street" MapPosition="{Binding MyPosition}" MapPins="{Binding PinCollection}" />
+        <StackLayout Grid.Row="1" Grid.RowSpan="3">
+
+            
+        
+    
+        <Label Text="Location" TextColor="Black" FontSize="6"  />
+            <Label Text="{Binding Location}"  x:Name="txtLocation" FontSize="6"  />
+            <Label Text="Temperature" TextColor="Black" FontSize="6"  />
+            <Label Text="{Binding Temperature}"  x:Name="txtTemperature" FontSize="6"  />
+            <Label Text="Sunrise" TextColor="Black" FontSize="6"  />
+            <Label Text="{Binding Sunrise}"  x:Name="txtSunrise" FontSize="6"  />
+            <Label Text="Sunset" TextColor="Black" FontSize="6"  />
+            <Label Text="{Binding Sunset}"  x:Name="txtSunset" FontSize="6"  />
+            <Label Text="Wind Speed" TextColor="Black"  FontSize="6" />
+            <Label Text="{Binding WindSpeed}"  x:Name="txtWind" FontSize="6"  />
+            <Label Text="Humidity" TextColor="Black"  FontSize="6" />
+            <Label Text="{Binding Humidity}"  x:Name="txtHumidity" FontSize="6"  />
+            
+    </StackLayout>
+        <Button BackgroundColor="#3b5998" Clicked="adddata" Text="Favourite" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" FontSize="4"></Button>
+    </Grid>
+</ContentPage>

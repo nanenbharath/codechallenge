@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewLocationApp.FindLocationPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+        <StackLayout
+                Orientation="Vertical">
+            <Entry x:Name="ZipCodeEntry"
+                       Placeholder="Enter ZipCode"
+                       Text="{Binding ZipCode}"></Entry>
+            <Entry x:Name="CountryEntry"
+                       Placeholder="Enter Country"
+                       Text="{Binding Country}"></Entry>
+                <Button Text="Go" Clicked="Button_OnClicked" ></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
